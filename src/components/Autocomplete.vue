@@ -51,7 +51,7 @@
 
         <!-- no results -->
         <li v-if="noResultMessage" class="autocomplete__results__item autocomplete__no-results">
-          <slot name="noResults">No Results.</slot>
+          <slot name="noResults">{{ msgNoResults }}</slot>
         </li>
       </slot>
     </ul>
@@ -149,6 +149,14 @@ export default {
      */
     clearButtonIcon: {
       type: String
+    },
+
+    /* 
+     * Optional message no results
+      */
+    msgNoResults: {
+      type: String,
+      default: 'No Results.'
     }
   },
   data () {
