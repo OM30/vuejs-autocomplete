@@ -14,6 +14,7 @@
           source="https://api.github.com/search/repositories?q="
           results-property="items"
           results-display="full_name"
+          msg-no-results="Não foi encontrado nenhum registro!"
           @selected="setXHRValue"
           @clear="setXHRValue({})">
         </autocomplete>

@@ -151,9 +151,6 @@ export default {
       type: String
     },
 
-    /* 
-     * Optional message no results
-      */
     msgNoResults: {
       type: String,
       default: 'No Results.'
