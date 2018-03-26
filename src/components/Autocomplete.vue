@@ -496,12 +496,13 @@ export default {
   display flex
   align-items center
   background #fff
-  border: 1px solid #ccc
+  border: 1px solid #e0e0e0
   border-radius 3px
   padding 0 5px
 
 .autocomplete__searching
   border-radius 3px 3px 0 0
+  border: 1px solid #00bcd4  
 
 .autocomplete__inputs
   flex-grow 1
