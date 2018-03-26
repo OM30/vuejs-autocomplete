@@ -1,12 +1,13 @@
 <template>
   <div class="autocomplete">
-    <div class="autocomplete__box" :class="[inputClass, {'autocomplete__searching' : showResults}]">
+    <div class="autocomplete__box" :class="[inputClass, {'autocomplete__searching' : showResults, 'autocomplete__searching' : isFocussed}]">
 
       <img v-if="!isLoading" class="autocomplete__icon" src="../assets/search.svg">
       <img v-else class="autocomplete__icon animate-spin" src="../assets/loading.svg">
 
       <div class="autocomplete__inputs">
         <input
+          class="autocomplete__focus"
           v-model="display"
           type="text"
           :placeholder="placeholder"
@@ -516,6 +517,10 @@ export default {
 .autocomplete--clear
   cursor pointer
 
+.autocomplete__focus
+  :focus
+    border: 1px solid #00bcd4 
+
 .autocomplete__results
   margin 0
   padding 0
@@ -544,6 +549,7 @@ export default {
 .autocomplete__icon
   height 14px
   width 14px
+  line-height 1
 
 .animate-spin
   animation spin 2s infinite linear
